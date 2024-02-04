@@ -51,7 +51,7 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     Grid.ColumnSpan="3"
-                    FontSize="66"
+                    FontSize="56"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"/>
         

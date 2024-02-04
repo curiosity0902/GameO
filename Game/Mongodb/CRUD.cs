@@ -16,6 +16,5 @@ namespace Game.Mongodb
             var collection = database.GetCollection<Character>("CharacterCollection");
             collection.InsertOne(character);
         }
-
     }
 }
