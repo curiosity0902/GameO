@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Game.Mongodb;
 
 namespace Game.Pages
 {
@@ -20,11 +21,14 @@ namespace Game.Pages
     /// </summary>
     public partial class CharacterPage
     {
-        public CharacterPage(Character character)
+        public CharacterPage()
         {
-            InitializeComponent();
-            characterName.Text = character.Name;
-            characterStats.Text = $"Strength: {character.Strength}, Intelligence: {character.Intelligence}, Agility: {character.Agility}";
+            InitializeComponent();           
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            CRUD.CreateCharacter(new Character("Warrior 1", 30, 250, 15, 80, 10, 50, 25, 100));
         }
     }
 }

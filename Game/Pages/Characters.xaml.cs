@@ -28,26 +28,17 @@ namespace Game.Pages
 
         private void WarriorBtn_Click(object sender, RoutedEventArgs e)
         {
-            Character warrior = new Character("Warrior");
-            warrior.CalculateStats();
-            CharacterPage warriorPage = new CharacterPage(warrior);
-            this.Content = warriorPage;
+            NavigationService.Navigate(new CharacterPage());
         }
 
         private void RogueBtn_Click(object sender, RoutedEventArgs e)
         {
-            Character rogue = new Character("Rogue");
-            rogue.CalculateStats();
-            CharacterPage roguePage = new CharacterPage(rogue);
-            this.Content = roguePage;
+            
         }
 
         private void WizardBtn_Click(object sender, RoutedEventArgs e)
         {
-            Character wizard = new Character("Mage");
-            wizard.CalculateStats();
-            CharacterPage wizardPage = new CharacterPage(wizard);
-            this.Content = wizardPage;
+          
         }
     }
 }
