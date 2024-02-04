@@ -9,7 +9,7 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Characters">
 
-    <Grid Background="#B0C4DE">
+    <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,6 +20,14 @@
             <RowDefinition Height="650"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
+        <Image Source="\Image\picter.jpg"
+               Height="1080"
+               Width="1920"
+               Grid.Column="0"
+               Grid.Row="0"
+               Grid.RowSpan="3"
+               Grid.ColumnSpan="3"/>
         
         <TextBlock
             Text="WARRIOR"
@@ -47,13 +55,39 @@
                 VerticalAlignment="Center"/>
         
         <Button x:Name="WarriorBtn" 
+               Background="Transparent"
+                BorderBrush="Transparent"
                Grid.Column="0"
                Grid.Row="1"
+                Grid.RowSpan="2"
                Height="480" 
                Width="620"
                Click="WarriorBtn_Click">
-            <Image Source="\Image\WAR.jpg" />
+            <Image Source="\Image\png1.png" />
         </Button>
         
+        <Button x:Name="RogueBtn" 
+             Background="Transparent"
+              BorderBrush="Transparent"
+             Grid.Column="1"
+             Grid.Row="1"
+              Grid.RowSpan="2"
+             Height="480" 
+             Width="620"
+             Click="RogueBtn_Click">
+            <Image Source="\Image\png1.png" />
+        </Button>
+        
+        <Button x:Name="WizardBtn" 
+             Background="Transparent"
+              BorderBrush="Transparent"
+             Grid.Column="2"
+             Grid.Row="1"
+              Grid.RowSpan="2"
+             Height="480" 
+             Width="620"
+             Click="WizardBtn_Click">
+            <Image Source="\Image\png1.png" />
+        </Button>
     </Grid>
 </Page>

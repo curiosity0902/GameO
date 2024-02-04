@@ -16,13 +16,15 @@ using System.Windows.Shapes;
 namespace Game.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Warrior.xaml
+    /// Логика взаимодействия для CharacterPage.xaml
     /// </summary>
-    public partial class Warrior : Page
+    public partial class CharacterPage
     {
-        public Warrior()
+        public CharacterPage(Character character)
         {
             InitializeComponent();
+            characterName.Text = character.Name;
+            characterStats.Text = $"Strength: {character.Strength}, Intelligence: {character.Intelligence}, Agility: {character.Agility}";
         }
     }
 }

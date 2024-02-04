@@ -18,8 +18,9 @@ namespace Game.Pages
     /// <summary>
     /// Логика взаимодействия для Characters.xaml
     /// </summary>
-    public partial class Characters : Page
+    public partial class Characters
     {
+        //public int 
         public Characters()
         {
             InitializeComponent();
@@ -27,7 +28,26 @@ namespace Game.Pages
 
         private void WarriorBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Warrior());
+            Character warrior = new Character("Warrior");
+            warrior.CalculateStats();
+            CharacterPage warriorPage = new CharacterPage(warrior);
+            this.Content = warriorPage;
+        }
+
+        private void RogueBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Character rogue = new Character("Rogue");
+            rogue.CalculateStats();
+            CharacterPage roguePage = new CharacterPage(rogue);
+            this.Content = roguePage;
+        }
+
+        private void WizardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Character wizard = new Character("Mage");
+            wizard.CalculateStats();
+            CharacterPage wizardPage = new CharacterPage(wizard);
+            this.Content = wizardPage;
         }
     }
 }
