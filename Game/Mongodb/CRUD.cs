@@ -16,5 +16,14 @@ namespace Game.Mongodb
             var collection = database.GetCollection<Character>("CharacterCollection");
             collection.InsertOne(character);
         }
+
+        public static Character GetCharacter(string name)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Characters");
+            var collection = database.GetCollection<Character>("CharacterCollection");
+            var character = collection.Find(x => x.Name == name).FirstOrDefault();
+            return character;
+        }
     }
 }

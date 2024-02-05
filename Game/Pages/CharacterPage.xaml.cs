@@ -23,12 +23,22 @@ namespace Game.Pages
     {
         public CharacterPage()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            txtName.Text = App.SelectedCh.Name;
+            int intek = App.SelectedCh.Intelegence;
+            int intek1 = App.SelectedCh.Dexterity;
+            int intek2 = App.SelectedCh.Vitality;
+            int intek3 = App.SelectedCh.Strenght;
+            
+            StrengthTb.Text = intek3.ToString();           
+            IntelegenceTb.Text = intek.ToString();
+            DexterityTb.Text = intek1.ToString();
+            VitalityTb.Text = intek2.ToString();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            CRUD.CreateCharacter(new Character("Warrior 1", 30, 250, 15, 80, 10, 50, 25, 100, 100, 100));
+            CRUD.CreateCharacter(new Character("Warrior 1", 30, 250, 15, 80, 10, 50, 25, 100, 100, 100, 0, 0, 0, 0, 0, 0));
             NavigationService.Navigate(new Characters());
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
+    [BsonIgnoreExtraElements]
     public class Character
     {
         public string Name { get; set; }
@@ -17,10 +19,19 @@ namespace Game
         public int Strenght { get; set; }
         public int Dexterity { get; set; }   
         public int Intelegence { get; set; }
-     
+        public double PDamage { get; set; }
+        public double Armor { get; set; }
+        public double MDamage { get; set; }
+        public double MDefence { get; set; }
+        public double CrtChanse { get; set; }
+        public double CrtDamage { get; set; }
+
+
         public double Heath { get; set; }
         public double Manna { get; set; }
-        public Character(string name, int strenght, int maxStrenght, int dexterity, int maxDexterity, int intelegence, int maxIntelegence, int vitality, int maxVitality, double health, double manna)
+        public Character(string name, int strenght, int maxStrenght, int dexterity, int maxDexterity, 
+            int intelegence, int maxIntelegence, int vitality, int maxVitality, double health, double manna, 
+            double pdamage, double armor, double mdamage, double mdefence, double crtchanse, double crtmdamage)
         {
             Name = name;
             Strenght = strenght;
@@ -33,7 +44,12 @@ namespace Game
             MaxVitality = maxVitality;
             Heath = health;
             Manna = manna;
-            
+            PDamage = pdamage;
+            Armor = armor;
+            MDamage = mdamage;
+            MDefence = mdefence;
+            CrtChanse = crtchanse;
+            CrtDamage = crtmdamage;          
         }
 
 
