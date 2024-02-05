@@ -29,19 +29,17 @@ namespace Game.Pages
 
         private void WarriorBtn_Click(object sender, RoutedEventArgs e)
         {
-            CRUD.CreateCharacter(new Character("Warrior 1", 30, 250, 15, 80, 10, 50, 25, 100, 100, 100, 0, 0, 0, 0, 0, 0));
-            App.SelectedCh = CRUD.GetCharacter("Warrior 1");
             NavigationService.Navigate(new CharacterPage());
         }
 
         private void RogueBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new CharacterPageRoung());
         }
 
         private void WizardBtn_Click(object sender, RoutedEventArgs e)
         {
-          
+            NavigationService.Navigate(new CharacterPageWizard());
         }
     }
 }

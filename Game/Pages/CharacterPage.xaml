@@ -40,7 +40,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="txtName"
+        <TextBox x:Name="txtName"
                  Width="450"
                  Height="90"
                  FontSize="46"
@@ -64,41 +64,41 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="StrengthTb" 
+        <TextBox x:Name="StrengthTb" 
                      Grid.Row="2"
                      Grid.Column="1" 
                      FontSize="46"
                      Width="350"
-                     Height="90"/>
-        
-        <TextBlock Text="Dexterity:" 
+                     Height="90" Text="30"/>
+
+        <TextBlock Text="Intelegence:" 
            Grid.Column="0"
            Grid.Row="3"
            FontSize="46"
            HorizontalAlignment="Center"
            VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="DexterityTb"
+        <TextBox x:Name="IntelegenceTb"
                      Grid.Row="2"
                      FontSize="46"
                      Grid.Column="3" 
                      Width="350"
                      Height="90"
-                     />
+                     Text="15"/>
 
-        <TextBlock Text="Intelegence:" 
+        <TextBlock Text="Dexterity:" 
            Grid.Column="2"
            Grid.Row="2"
            FontSize="46"
            HorizontalAlignment="Center"
            VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="IntelegenceTb"  
+        <TextBox x:Name="DexterityTb"  
                      Grid.Row="3"
                      Grid.Column="1"
                      FontSize="46"
                      Width="350"
-                     Height="90"/>
+                     Height="90" Text="10"/>
 
         <TextBlock Text="Vitality:" 
        Grid.Column="2"
@@ -107,12 +107,12 @@
        HorizontalAlignment="Center"
        VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="VitalityTb"   
+        <TextBox x:Name="VitalityTb"   
                      Grid.Row="3"
                      Grid.Column="3" 
                      FontSize="46"
                      Width="350"
-                     Height="90"/>
+                     Height="90" Text="25"/>
         
         <Button Name="btnCreate" Click="btnCreate_Click" 
                 Grid.Row="4"

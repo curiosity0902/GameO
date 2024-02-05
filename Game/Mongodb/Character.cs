@@ -42,7 +42,7 @@ namespace Game
             MaxIntelegence = maxIntelegence;
             Vitality = vitality;
             MaxVitality = maxVitality;
-            Heath = health;
+            Heath = health ;
             Manna = manna;
             PDamage = pdamage;
             Armor = armor;
@@ -51,8 +51,6 @@ namespace Game
             CrtChanse = crtchanse;
             CrtDamage = crtmdamage;          
         }
-
-
         public void GetAttributsWarrrior()
         {
             Heath = Vitality * 2;

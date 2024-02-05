@@ -60,10 +60,10 @@
                Grid.Column="0"
                Grid.Row="1"
                 Grid.RowSpan="2"
-               Height="480" 
+               Height="780" 
                Width="620"
                Click="WarriorBtn_Click">
-            <Image Source="\Image\png1.png" />
+            <Image Source="\Image\png3.png" />
         </Button>
         
         <Button x:Name="RogueBtn" 
@@ -72,10 +72,10 @@
              Grid.Column="1"
              Grid.Row="1"
               Grid.RowSpan="2"
-             Height="480" 
+             Height="780" 
              Width="620"
              Click="RogueBtn_Click">
-            <Image Source="\Image\png1.png" />
+            <Image Source="\Image\png5.png" />
         </Button>
         
         <Button x:Name="WizardBtn" 
@@ -84,10 +84,10 @@
              Grid.Column="2"
              Grid.Row="1"
               Grid.RowSpan="2"
-             Height="480" 
+             Height="780" 
              Width="620"
              Click="WizardBtn_Click">
-            <Image Source="\Image\png1.png" />
+            <Image Source="\Image\png4.png" />
         </Button>
     </Grid>
 </Page>

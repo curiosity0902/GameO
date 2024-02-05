@@ -19,27 +19,23 @@ namespace Game.Pages
     /// <summary>
     /// Логика взаимодействия для CharacterPage.xaml
     /// </summary>
-    public partial class CharacterPage
+    public partial class CharacterPage //Cоздается ВОИН WARRIOR
     {
         public CharacterPage()
         {
             InitializeComponent();
-            txtName.Text = App.SelectedCh.Name;
-            int intek = App.SelectedCh.Intelegence;
-            int intek1 = App.SelectedCh.Dexterity;
-            int intek2 = App.SelectedCh.Vitality;
-            int intek3 = App.SelectedCh.Strenght;
-            
-            StrengthTb.Text = intek3.ToString();           
-            IntelegenceTb.Text = intek.ToString();
-            DexterityTb.Text = intek1.ToString();
-            VitalityTb.Text = intek2.ToString();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            CRUD.CreateCharacter(new Character("Warrior 1", 30, 250, 15, 80, 10, 50, 25, 100, 100, 100, 0, 0, 0, 0, 0, 0));
-            NavigationService.Navigate(new Characters());
+            string name = txtName.Text;
+            int strength = Convert.ToInt32(StrengthTb.Text);
+            int intelegence = Convert.ToInt32(IntelegenceTb.Text);
+            int dexterity = Convert.ToInt32(DexterityTb.Text);
+            int vitality = Convert.ToInt32(VitalityTb.Text);
+            CRUD.CreateCharacterWarrior(new Character(name, strength, 250, dexterity, 80, intelegence, 50, vitality, 100, 0, 0, 0, 0, 0, 0, 0, 0));
+            NavigationService.Navigate(new NotBaseStatpointsPage());
         }
+
     }
 }

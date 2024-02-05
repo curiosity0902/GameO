@@ -139,7 +139,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\CharacterPageRoung.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CharacterPageWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Characters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NotBaseStatpointsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,8 +160,17 @@
     <Compile Include="Pages\CharacterPage.xaml.cs">
       <DependentUpon>CharacterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CharacterPageRoung.xaml.cs">
+      <DependentUpon>CharacterPageRoung.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CharacterPageWizard.xaml.cs">
+      <DependentUpon>CharacterPageWizard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Characters.xaml.cs">
       <DependentUpon>Characters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotBaseStatpointsPage.xaml.cs">
+      <DependentUpon>NotBaseStatpointsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -193,6 +214,9 @@
     <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Image\png3.png" />
+    <Resource Include="Image\png4.png" />
+    <Resource Include="Image\png5.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
