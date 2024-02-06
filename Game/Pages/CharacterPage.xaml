@@ -15,8 +15,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -29,11 +33,11 @@
              Width="1920"
              Grid.Column="0"
              Grid.Row="0"
-             Grid.RowSpan="5"
-             Grid.ColumnSpan="5"/>
+             Grid.RowSpan="7"
+             Grid.ColumnSpan="7"/>
 
         <TextBlock Text="Enter Character Name:" 
-                   Grid.Column="1"
+                   Grid.Column="0"
                    Grid.Row="0"
                    FontSize="46"
                    Grid.ColumnSpan="2"
@@ -43,80 +47,286 @@
         <TextBox x:Name="txtName"
                  Width="450"
                  Height="90"
-                 FontSize="46"
+                 FontSize="36"
                  VerticalAlignment="Center"
                  Grid.Row="0"
                  Grid.Column="2"
                  Grid.ColumnSpan="2"/>
-        
-        <TextBlock Text="Enter Character Attributes:" 
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="3"
-                    FontSize="56"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
-        
+
         <TextBlock Text="Strength:" 
+            Margin="15"
             Grid.Column="0"
             Grid.Row="2"
-            FontSize="46"
-            HorizontalAlignment="Center"
+            FontSize="36"
+            HorizontalAlignment="Left"
             VerticalAlignment="Center"/>
 
+        <Button Name="PlusStrenghbtn" Click="PlusStrenghbtn_Click" 
+               Grid.Row="2"
+               Grid.Column="0"
+               Margin="0 20 40 0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               Width="50"
+               Height="50"
+               FontSize="42"
+               FontFamily="Bord"
+               Content="+"/>
+        
+        <Button Name="MinusStrenghbtn" Click="MinusStrenghbtn_Click" 
+        Grid.Row="2"
+        Grid.Column="0"
+        Margin="40 0 40 20"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Bottom"
+        Width="50"
+        Height="50"
+        FontSize="42"
+        FontFamily="Bord"
+        Content="-"/>
+        
         <TextBox x:Name="StrengthTb" 
                      Grid.Row="2"
                      Grid.Column="1" 
-                     FontSize="46"
+                     FontSize="36"
                      Width="350"
                      Height="90" Text="30"/>
 
         <TextBlock Text="Intelegence:" 
            Grid.Column="0"
+           Margin="15"
            Grid.Row="3"
-           FontSize="46"
-           HorizontalAlignment="Center"
+           FontSize="36"
+           HorizontalAlignment="Left"
            VerticalAlignment="Center"/>
 
         <TextBox x:Name="IntelegenceTb"
                      Grid.Row="2"
-                     FontSize="46"
+                     FontSize="36"
                      Grid.Column="3" 
                      Width="350"
                      Height="90"
                      Text="15"/>
 
+        <Button Name="PlusIntelegencebtn"
+         Grid.Row="3"
+         Grid.Column="0"
+         Margin="0 20 40 0"
+         HorizontalAlignment="Right"
+         VerticalAlignment="Top"
+         Width="50"
+         Height="50"
+         FontSize="42"
+         FontFamily="Bord"
+         Content="+"/>
+
+        <Button Name="MinusIntelegencebtn"
+        Grid.Row="3"
+        Grid.Column="0"
+        Margin="40 0 40 20"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Bottom"
+        Width="50"
+        Height="50"
+        FontSize="42"
+        FontFamily="Bord"
+        Content="-"/>
+        
         <TextBlock Text="Dexterity:" 
            Grid.Column="2"
            Grid.Row="2"
-           FontSize="46"
-           HorizontalAlignment="Center"
+           FontSize="36"
+           Margin="15"
+           HorizontalAlignment="Left"
            VerticalAlignment="Center"/>
 
         <TextBox x:Name="DexterityTb"  
                      Grid.Row="3"
                      Grid.Column="1"
-                     FontSize="46"
+                     FontSize="36"
                      Width="350"
                      Height="90" Text="10"/>
+        
+        <Button Name="PlusDexteritybtn"
+          Grid.Row="2"
+          Grid.Column="2"
+          Margin="0 20 40 0"
+          HorizontalAlignment="Right"
+          VerticalAlignment="Top"
+          Width="50"
+          Height="50"
+          FontSize="42"
+          FontFamily="Bord"
+          Content="+"/>
 
+        <Button Name="MinusDexteritybtn" 
+   Grid.Row="2"
+   Grid.Column="2"
+   Margin="40 0 40 20"
+   HorizontalAlignment="Right"
+   VerticalAlignment="Bottom"
+   Width="50"
+   Height="50"
+   FontSize="42"
+   FontFamily="Bord"
+   Content="-"/>
         <TextBlock Text="Vitality:" 
        Grid.Column="2"
        Grid.Row="3"
-       FontSize="46"
-       HorizontalAlignment="Center"
+       FontSize="36"
+       HorizontalAlignment="Left"
        VerticalAlignment="Center"/>
 
         <TextBox x:Name="VitalityTb"   
                      Grid.Row="3"
                      Grid.Column="3" 
-                     FontSize="46"
+                     FontSize="36"
                      Width="350"
                      Height="90" Text="25"/>
+
+        <Button Name="PlusVitalitybtn"
+          Grid.Row="3"
+          Grid.Column="2"
+          Margin="0 20 40 0"
+          HorizontalAlignment="Right"
+          VerticalAlignment="Top"
+          Width="50"
+          Height="50"
+          FontSize="42"
+          FontFamily="Bord"
+          Content="+"/>
+
+        <Button Name="MinusVitalitybtn" 
+            Grid.Row="3"
+            Grid.Column="2"
+            Margin="40 0 40 20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Width="50"
+            Height="50"
+            FontSize="42"
+            FontFamily="Bord"
+            Content="-"/>
+
+        <TextBlock Text="Health:" 
+Grid.Column="4"
+Grid.Row="2"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="HealthTB"   
+              Grid.Row="2"
+              Grid.Column="5" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+        <TextBlock Text="Manna:" 
+Grid.Column="4"
+Grid.Row="3"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="MannaTB"   
+              Grid.Row="3"
+              Grid.Column="5" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+        <TextBlock Text="p.Damage:" 
+Grid.Column="0"
+Grid.Row="4"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="PDamageTb"   
+              Grid.Row="4"
+              Grid.Column="1" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+
+        <TextBlock Text="Armor:" 
+Grid.Column="2"
+Grid.Row="4"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="ArmorTb"   
+              Grid.Row="4"
+              Grid.Column="3" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+
+        <TextBlock Text="m.Damage:" 
+Grid.Column="4"
+Grid.Row="4"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="MDamageTb"   
+              Grid.Row="4"
+              Grid.Column="5" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+        <TextBlock Text="m.Defence:" 
+Grid.Column="0"
+Grid.Row="5"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="MDefenceTb"   
+              Grid.Row="5"
+              Grid.Column="1" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+
+        <TextBlock Text="crt.Chanse:" 
+Grid.Column="2"
+Grid.Row="5"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="CRTChanseTb"   
+              Grid.Row="5"
+              Grid.Column="3" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
+
+
+        <TextBlock Text="crt.Damage:" 
+Grid.Column="4"
+Grid.Row="5"
+FontSize="36"
+HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="CRTDamageTb"   
+              Grid.Row="5"
+              Grid.Column="5" 
+              FontSize="36"
+              Width="350"
+              Height="90"/>
         
         <Button Name="btnCreate" Click="btnCreate_Click" 
-                Grid.Row="4"
-                Grid.Column="3"
+                Grid.Row="6"
+                Grid.Column="5"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Left"
                 Width="350"

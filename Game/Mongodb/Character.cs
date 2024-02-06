@@ -26,6 +26,16 @@ namespace Game
         public double CrtChanse { get; set; }
         public double CrtDamage { get; set; }
 
+        //public double CrtDamage
+        //{
+        //    get => _crtDamage;
+
+        //    set 
+        //    {
+        //        if (value > _crtDamage)
+
+        //    }
+        //}
 
         public double Heath { get; set; }
         public double Manna { get; set; }

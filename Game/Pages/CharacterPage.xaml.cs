@@ -23,7 +23,7 @@ namespace Game.Pages
     {
         public CharacterPage()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -33,9 +33,20 @@ namespace Game.Pages
             int intelegence = Convert.ToInt32(IntelegenceTb.Text);
             int dexterity = Convert.ToInt32(DexterityTb.Text);
             int vitality = Convert.ToInt32(VitalityTb.Text);
-            CRUD.CreateCharacterWarrior(new Character(name, strength, 250, dexterity, 80, intelegence, 50, vitality, 100, 0, 0, 0, 0, 0, 0, 0, 0));
-            NavigationService.Navigate(new NotBaseStatpointsPage());
+            double pdamage = Convert.ToDouble(PDamageTb.Text);
+            pdamage = strength * 2 + intelegence;
+            CRUD.CreateCharacterWarrior(new Character(name, strength, 250, dexterity, 80, intelegence, 50, vitality, 100, pdamage, 0, 0, 0, 0, 0, 0, 0));
+            NavigationService.Navigate(new CharacterPage());
         }
 
+        private void PlusStrenghbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MinusStrenghbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
