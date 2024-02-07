@@ -14,5 +14,6 @@ namespace Game
     public partial class App : Application
     {
         public static Character SelectedCh { get; set; }
+        public static Character character; //типо выбранный перс
     }
 }
